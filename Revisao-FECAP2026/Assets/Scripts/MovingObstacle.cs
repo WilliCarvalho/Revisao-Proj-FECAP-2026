@@ -30,7 +30,6 @@ public class MovingObstacle : MonoBehaviour
 
     private void HandleMovement()
     {
-        print($"New position: {startPos + distanceOffset}");
         if (canMove)
         {
             //Debug.Log("Moving");
@@ -54,7 +53,6 @@ public class MovingObstacle : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
         }
-        print("Time: " + elapsedTime);
     }
     
     private void CheckTimer()
