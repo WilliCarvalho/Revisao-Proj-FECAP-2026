@@ -1,41 +1,36 @@
-using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-    private InputControls inputControls;
-    private Vector2 inputDirection => inputControls.Player.Move.ReadValue<Vector2>();
+    
+    private InputManager inputManager;
 
     private Rigidbody rigidbody;
 
     private void Awake()
     {
-        inputControls = new InputControls();
-        inputControls.Enable();
-        
+        inputManager = new InputManager();
         rigidbody = GetComponent<Rigidbody>();
+        inputManager.OnAttackPressed += HandleAttackBehaviour;
     }
 
     private void FixedUpdate()
     {
-        float moveX = inputDirection.x * moveSpeed * Time.deltaTime;
-        float moveZ = inputDirection.y * moveSpeed * Time.deltaTime;
+        float moveX = inputManager.GetInputDirection().x * moveSpeed * Time.deltaTime;
+        float moveZ = inputManager.GetInputDirection().y * moveSpeed * Time.deltaTime;
         rigidbody.linearVelocity = new Vector3(moveX, rigidbody.linearVelocity.y, moveZ);
     }
-
+    
+    #region Referência de implementação - Não será utilizado no projeto
+    private void HandleAttackBehaviour()
+    {
+        print("Handling ATTACK with strength ");
+    }
+#endregion
     private void OnCollisionEnter(Collision other)
     {
         print("Collided with " + other.transform.name);
-    }
-
-    private void OnDestroy()
-    {
-        inputControls.Disable();
-    }
-
-    private void OnDisable()
-    {
-        inputControls.Disable();
     }
 }

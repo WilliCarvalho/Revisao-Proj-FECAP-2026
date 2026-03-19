@@ -436,8 +436,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3162277, y: -0.000000016561927, z: 0.0000000055206413, w: 0.9486833}
-  m_LocalPosition: {x: -9.3, y: 3.243, z: -16.2}
+  m_LocalRotation: {x: 0.3530484, y: -0.0000000018385595, z: 6.9377626e-10, w: 0.93560505}
+  m_LocalPosition: {x: -9.3, y: 3.763, z: -16.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1455,7 +1455,7 @@ GameObject:
   - component: {fileID: 1252513304}
   - component: {fileID: 1252513307}
   m_Layer: 0
-  m_Name: CinemachineCamera
+  m_Name: '[Cinemachine] Player Camera'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1475,11 +1475,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 0.2, y: 0.2, z: 0.2}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 3, z: -4}
+  FollowOffset: {x: 0, y: 3.52, z: -4}
 --- !u!114 &1252513305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,8 +1531,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252513302}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3162277, y: -0.000000016561927, z: 0.0000000055206404, w: 0.9486833}
-  m_LocalPosition: {x: -9.3, y: 3.243, z: -16.2}
+  m_LocalRotation: {x: 0.3530484, y: -0.000000002149234, z: 0.0000000015170867, w: 0.93560505}
+  m_LocalPosition: {x: -9.3, y: 3.763, z: -16.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

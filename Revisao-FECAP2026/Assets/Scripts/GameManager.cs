@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             uiManager.UpdateTimerUI(elapsedTime);
-            Debug.Log(elapsedTime);
         }
     }
 
